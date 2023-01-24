@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx lite-server",
-    "build": "npx copyfiles -u 1 src/**/*.{html,js} dist",
-    "build2": "npx copyfiles -u 4 node_modules/bootstrap/dist/css/bootstrap.css dist"
+    "build:src": "npx copyfiles -u 1 src/**/*.{html,js} dist",
+    "build:bootstrap": "npx copyfiles -u 4 node_modules/bootstrap/dist/css/bootstrap.css dist",
+    "build":"npm run build:src & npm run build:bootstrap"
   },
   "keywords": [],
   "author": "",
